@@ -17,5 +17,4 @@ def get_tasks():
 
 with open('quotes.json') as json_file:  
     data = json.load(json_file)
-    for p in data['NAME']:
-        print(p)
+        
