@@ -47,7 +47,7 @@ with open('quotes.json') as json_file:
     data = json.load(json_file)
 
 # ---------------------------------------------------------------
-# Tantative d'imporation de donnée via URL ** non fonctionnel **
+# Tentative d'imporation de donnée via URL ** non fonctionnel **
 # --------------
 
 @app.route('/stock/quotes/?currency=<currencyType>')
@@ -55,9 +55,9 @@ def index(currencyType):
     return jsonify(data[{}]).format(currencyType)
 
 # ---------------------------------------------------
-# Tntative d'importation de donnée via la method GET
+# Tentative d'importation de donnée via la method GET
 # --------------
 
-# @app.route('/quotes.json', methods=['GET'])
-# def get_currencyType():
-#     return ({'currencyType': currencyType})
+@app.route('/quotes.json', methods=['GET'])
+def get_currencyType():
+     return ({'currencyType': 'currencyType' })
